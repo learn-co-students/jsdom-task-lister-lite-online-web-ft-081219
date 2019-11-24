@@ -8,7 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     let newTask = document.createElement('li');
-    newTask.textContent = input.value;
+    newTask.textContent = input.value + ' ';
+
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = 'X';
+    newTask.appendChild(deleteButton);
+    deleteButton.addEventListener('click', function(event) {
+      list.removeChild(newTask);
+    });
+
     list.appendChild(newTask);
     input.value = '';
   });
