@@ -15,7 +15,6 @@ taskForm.addEventListener("submit", (event) =>{
 } )
 
 taskList.addEventListener("click", function(event) {
-  console.log(event.target)
   if (event.target.dataset.action === "delete") {
     event.target.parentElement.remove()
   } 
