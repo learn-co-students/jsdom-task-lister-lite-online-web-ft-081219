@@ -4,7 +4,6 @@ const taskList = document.querySelector("#tasks")
 taskForm.addEventListener("submit", (event) =>{
   event.preventDefault()
   const newTask = document.querySelector("#new-task-description").value
-  // const taskItem = document.createElement("li")
   
   taskList.innerHTML += `
     <li>${newTask}  
